@@ -1,0 +1,24 @@
+Python 3.11.0 a été utilisé pour ce projet.
+
+Environnement :
+Création et installation d'un environnement virtuel : python -m venv env
+Installation des paquets Python : pip install -r requirements.txt
+
+Lancement du script :
+La plage de données étudiée peut être changer en modifiant les deux dates de la ligne 62 du fichier ETL.py
+Il suffit ensuite de lancer le script : python ETL.py
+
+Decription de la base de données :
+La base contient une unique table energyProduction.
+Cette table contient deux colonnes :
+ - start_date de type DATETIME qui est la clé primaire et qui correspond à la date intiale de la plage horaire
+ - power de type int qui correspond à la production de la centrale entre la date initiale et 15min plus tard
+Le script d'initialisation de la base est disponible dans le fichier tableCreation.sql
+
+Pour continuer l'exercice :
+ - La documentation aurait pu être plus propre que ce simple fichier txt
+ - Le lancement du script pourrait être automatisé pour ne pas avoir à modifier les dates de ETL.py à la main
+ - Un docker-compose pourrait être écrit pour lancer la BDD et l'application
+ - Des logs et des messages d'informations auraient pu être ajoutés lors du succès/de l'échec d'une opération
+ - D'autres colonnes dans la BDD auraient pu être ajoutées comme par exemple id, created_at, ...
+ - ...
